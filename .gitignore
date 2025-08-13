@@ -1,0 +1,25 @@
+﻿# Python / Virtual Env
+venv/
+.venv/
+env/
+Lib/
+Scripts/
+__pycache__/
+*.pyc
+*.pyd
+
+# Node / Build systems
+node_modules/
+.next/
+dist/
+build/
+.cache/
+.tmp/
+
+# Maps (boleh hapus kalau tidak perlu)
+*.map
+
+# Misc
+*.log
+.DS_Store
+Thumbs.db
