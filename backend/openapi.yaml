@@ -1,0 +1,145 @@
+openapi: 3.0.3
+info:
+  title: Soyatrack API
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+paths:
+  /menu:
+    get:
+      summary: List menu items
+      responses:
+        '200': { description: OK }
+    post:
+      summary: Create menu item (auth required)
+      security: [ { bearerAuth: [] } ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name, category, price]
+              properties:
+                name: { type: string }
+                category: { type: string }
+                price: { type: number }
+                description: { type: string }
+      responses:
+        '201': { description: Created }
+  /menu/{id}:
+    get:
+      summary: Get menu item
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: OK }
+        '404': { description: Not found }
+    put:
+      summary: Update menu item (auth required)
+      security: [ { bearerAuth: [] } ]
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: integer }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MenuInput'
+      responses:
+        '200': { description: Updated }
+    delete:
+      summary: Delete menu item (auth required)
+      security: [ { bearerAuth: [] } ]
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: Deleted }
+  /auth/register:
+    post:
+      summary: Register user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email: { type: string, format: email }
+                password: { type: string, format: password }
+      responses:
+        '201': { description: Registered }
+  /auth/login:
+    post:
+      summary: Login user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email: { type: string, format: email }
+                password: { type: string, format: password }
+      responses:
+        '200': { description: Token returned }
+  /reservations:
+    post:
+      summary: Create reservation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name,email,phone,date,time,people]
+              properties:
+                name: { type: string }
+                email: { type: string, format: email }
+                phone: { type: string }
+                date: { type: string, format: date }
+                time: { type: string }
+                people: { type: integer }
+                message: { type: string }
+      responses:
+        '201': { description: Created }
+  /newsletter/subscribe:
+    post:
+      summary: Subscribe to newsletter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email]
+              properties:
+                email: { type: string, format: email }
+      responses:
+        '200': { description: Subscribed }
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    MenuInput:
+      type: object
+      required: [name,category,price]
+      properties:
+        name: { type: string }
+        category: { type: string }
+        price: { type: number }
+        description: { type: string }

@@ -1,25 +1,48 @@
-﻿# Python / Virtual Env
-venv/
+# OS / Editor
+.vscode/
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Logs
+*.log
+
+# Secrets / Env
+.env
+.env.*
+*.env
+
+# Python env & cache
 .venv/
+venv/
 env/
-Lib/
-Scripts/
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
 *.pyd
 
-# Node / Build systems
-node_modules/
-.next/
-dist/
+# Build / packaging
 build/
-.cache/
-.tmp/
+dist/
+*.egg-info/
+.eggs/
 
-# Maps (boleh hapus kalau tidak perlu)
-*.map
+# Django / DB (hapus jika pakai DB lain dan ingin commit)
+*.sqlite3
+db.sqlite3
+
+# Static collect (jika pakai collectstatic)
+staticfiles/
+media/
+
+# Test / coverage / tooling
+.pytest_cache/
+.coverage
+coverage/
+htmlcov/
+.mypy_cache/
+.cache/
 
 # Misc
-*.log
-.DS_Store
-Thumbs.db
+*.bak
+*.tmp

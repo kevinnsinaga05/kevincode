@@ -1,0 +1,111 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 24px;
+}
+
+.hero-content p {
+    margin: 10px 0;
+}
+
+.hero-content button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+.hero-content button:hover {
+    background-color: #0056b3;
+}
+
+.hero-image {
+    width: 50%;
+}
+
+.hero-image img {
+    width:none;
+    border-radius: 10px;
+}
+
+/* About Me */
+.about {
+    text-align: center;
+    padding: 30px;
+    width: 50%;
+    color:red;
+}
+
+/* Portfolio */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.portfolio-item {
+    background: #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content, .hero-image {
+        width: 100%;
+    }
+
+    .portfolio {
+        grid-template-columns: 1fr;
+    }
+}
