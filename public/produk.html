@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+  <meta name="description" content="Gressoy Wedding Package - Healthy drink solution for your special day">
+  <meta name="google-site-verification" content="sScSSVC4YjlvL_x1y94jFTFVj4JabPpPrUo007hUkf8" />
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- ======= Header/Navbar ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center bg-white shadow-sm">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="assets/BG Gressoy.png" alt="Gressoy Logo" class="navbar-logo" style="height: 80px; border: none; box-shadow: none;">
+        </a>
+      </h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto fw-semibold" href="index.html#social-media">Social Media</a></li>
+          <li><a class="nav-link scrollto fw-semibold" href="index.html#lokasi">Location</a></li>
+          <li><a class="nav-link scrollto fw-semibold" href="index.html#order">Order Online</a></li>
+          <li><a class="nav-link scrollto fw-semibold" href="about.html">About Us</a></li>
+          <li><a class="nav-link scrollto fw-semibold active" href="produk.html" aria-current="page" style="color:#198754; background:rgba(40,167,69,0.08); border-radius:2em; padding:0.3em 1.2em;">Product</a></li>
+          <!-- <li><a class="nav-link scrollto fw-semibold" href="index.html#review">Customer Review</a></li> -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" style="margin-top: 140px;">
+    <!-- Hero Section -->
+    <section class="hero-section" style="background: linear-gradient(135deg, #198754 0%, #28a745 100%); color: white; padding: 80px 0;">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8 mx-auto text-center">
+            <span class="badge bg-light text-success fs-6 mb-3 px-4 py-2 rounded-pill">
+              <i class="bi bi-award-fill me-2"></i>Featured Products
+            </span>
+            <h1 class="display-4 fw-bold mb-4 animate-fade-in">
+              Best Seller <span style="color: #fbc02d;">Gressoy</span>
+            </h1>
+            <p class="lead fs-5 opacity-90 mb-4 animate-slide-up">
+              Healthy and delicious soy milk options for your daily needs
+            </p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <span class="badge bg-light text-success px-3 py-2">✓ 100% Natural</span>
+              <span class="badge bg-light text-success px-3 py-2">✓ No Preservatives</span>
+              <span class="badge bg-light text-success px-3 py-2">✓ Rich in Protein</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section py-5">
+      <div class="container">
+        <div class="row g-4" id="products-grid">
+          
+          <!-- Product Card 1 -->
+          <div class="col-lg-4 col-md-6 product-item drink" data-category="drink">
+            <div class="product-card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative">
+              <div class="product-image-container position-relative overflow-hidden">
+                <img src="img/Gressoy cup 2.JPEG.jpg" alt="Gressoy Original" class="product-image img-fluid w-100" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;">
+                <div class="product-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(25, 135, 84, 0.8); opacity: 0; transition: opacity 0.3s ease;">
+                  <button class="btn btn-light btn-lg rounded-pill px-4" onclick="openProductModal('original')">
+                    <i class="bi bi-eye me-2"></i>View Details
+                  </button>
+                </div>
+                <span class="badge bg-success position-absolute top-3 start-3 px-3 py-2">
+                  <i class="bi bi-star-fill me-1"></i>Popular
+                </span>
+              </div>
+              <div class="card-body p-4">
+                <h5 class="card-title fw-bold text-success mb-2">Gressoy Original</h5>
+                <p class="card-text text-muted mb-3 small">Pure soy milk with refreshing and nutritious characteristic taste</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="price text-success fw-bold fs-5">Rp 15.000</div>
+                  <button class="btn btn-success btn-sm rounded-pill px-3" onclick="addToCart('original')">
+                    <i class="bi bi-cart-plus me-1"></i>Order
+                  </button>
+                </div>
+                <div class="rating mt-2">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <small class="text-muted ms-1">(4.9)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="col-lg-4 col-md-6 product-item drink" data-category="drink">
+            <div class="product-card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative">
+              <div class="product-image-container position-relative overflow-hidden">
+                <img src="img/Gressoy cup.JPEG.jpg" alt="Gressoy Vanilla" class="product-image img-fluid w-100" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;">
+                <div class="product-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(25, 135, 84, 0.8); opacity: 0; transition: opacity 0.3s ease;">
+                  <button class="btn btn-light btn-lg rounded-pill px-4" onclick="openProductModal('vanilla')">
+                    <i class="bi bi-eye me-2"></i>View Details
+                  </button>
+                </div>
+                <span class="badge bg-warning position-absolute top-3 start-3 px-3 py-2 text-dark">
+                  <i class="bi bi-lightning-fill me-1"></i>Latest
+                </span>
+              </div>
+              <div class="card-body p-4">
+                <h5 class="card-title fw-bold text-success mb-2">Gressoy Vanilla</h5>
+                <p class="card-text text-muted mb-3 small">Perfect blend of soy milk with soft and sweet vanilla aroma</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="price text-success fw-bold fs-5">Rp 18.000</div>
+                  <button class="btn btn-success btn-sm rounded-pill px-3" onclick="addToCart('vanilla')">
+                    <i class="bi bi-cart-plus me-1"></i>Order
+                  </button>
+                </div>
+                <div class="rating mt-2">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star text-warning"></i>
+                  <small class="text-muted ms-1">(4.7)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="col-lg-4 col-md-6 product-item drink" data-category="drink">
+            <div class="product-card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative">
+              <div class="product-image-container position-relative overflow-hidden">
+                <img src="img/Gressoy Redvelvet.JPEG.jpg" alt="Gressoy Red Velvet" class="product-image img-fluid w-100" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;">
+                <div class="product-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(25, 135, 84, 0.8); opacity: 0; transition: opacity 0.3s ease;">
+                  <button class="btn btn-light btn-lg rounded-pill px-4" onclick="openProductModal('redvelvet')">
+                    <i class="bi bi-eye me-2"></i>View Details
+                  </button>
+                </div>
+                <span class="badge bg-danger position-absolute top-3 start-3 px-3 py-2">
+                  <i class="bi bi-fire me-1"></i>Limited
+                </span>
+              </div>
+              <div class="card-body p-4">
+                <h5 class="card-title fw-bold text-success mb-2">Gressoy Red Velvet</h5>
+                <p class="card-text text-muted mb-3 small">Latest innovation with unique and appetizing red velvet flavor</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="price text-success fw-bold fs-5">Rp 20.000</div>
+                  <button class="btn btn-success btn-sm rounded-pill px-3" onclick="addToCart('redvelvet')">
+                    <i class="bi bi-cart-plus me-1"></i>Order
+                  </button>
+                </div>
+                <div class="rating mt-2">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <small class="text-muted ms-1">(5.0)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="col-lg-4 col-md-6 product-item hampers" data-category="hampers">
+            <div class="product-card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative">
+              <div class="product-image-container position-relative overflow-hidden">
+                <img src="img/Gressoy Hampers 2.PNG" alt="Hampers 2 Botol" class="product-image img-fluid w-100" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;">
+                <div class="product-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(25, 135, 84, 0.8); opacity: 0; transition: opacity 0.3s ease;">
+                  <button class="btn btn-light btn-lg rounded-pill px-4" onclick="openProductModal('hampers2')">
+                    <i class="bi bi-eye me-2"></i>View Details
+                  </button>
+                </div>
+                <span class="badge bg-info position-absolute top-3 start-3 px-3 py-2">
+                  <i class="bi bi-gift me-1"></i>Value Pack
+                </span>
+              </div>
+              <div class="card-body p-4">
+                <h5 class="card-title fw-bold text-success mb-2">Hampers 2 Bottles</h5>
+                <p class="card-text text-muted mb-3 small">Value pack of 2 Gressoy bottles with exclusive packaging for gifts</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <span class="text-muted text-decoration-line-through small">Rp 36.000</span>
+                    <div class="price text-success fw-bold fs-5">Rp 30.000</div>
+                  </div>
+                  <button class="btn btn-success btn-sm rounded-pill px-3" onclick="addToCart('hampers2')">
+                    <i class="bi bi-cart-plus me-1"></i>Order
+                  </button>
+                </div>
+                <div class="rating mt-2">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star text-warning"></i>
+                  <small class="text-muted ms-1">(4.8)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 5 -->
+          <div class="col-lg-4 col-md-6 product-item hampers" data-category="hampers">
+            <div class="product-card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative">
+              <div class="product-image-container position-relative overflow-hidden">
+                <img src="img/Gressoy Hampers 3.PNG" alt="Hampers 3 Botol" class="product-image img-fluid w-100" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;">
+                <div class="product-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(25, 135, 84, 0.8); opacity: 0; transition: opacity 0.3s ease;">
+                  <button class="btn btn-light btn-lg rounded-pill px-4" onclick="openProductModal('hampers3')">
+                    <i class="bi bi-eye me-2"></i>View Details
+                  </button>
+                </div>
+                <span class="badge bg-primary position-absolute top-3 start-3 px-3 py-2">
+                  <i class="bi bi-award me-1"></i>Favorite
+                </span>
+              </div>
+              <div class="card-body p-4">
+                <h5 class="card-title fw-bold text-success mb-2">Hampers 3 Bottles</h5>
+                <p class="card-text text-muted mb-3 small">Family pack of 3 bottles with different flavor variants in one package</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <span class="text-muted text-decoration-line-through small">Rp 54.000</span>
+                    <div class="price text-success fw-bold fs-5">Rp 45.000</div>
+                  </div>
+                  <button class="btn btn-success btn-sm rounded-pill px-3" onclick="addToCart('hampers3')">
+                    <i class="bi bi-cart-plus me-1"></i>Order
+                  </button>
+                </div>
+                <div class="rating mt-2">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <small class="text-muted ms-1">(4.9)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 6 -->
+          <div class="col-lg-4 col-md-6 product-item hampers" data-category="hampers">
+            <div class="product-card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative">
+              <div class="product-image-container position-relative overflow-hidden">
+                <img src="img/Gressoy Hampers.PNG" alt="Hampers 4 Botol" class="product-image img-fluid w-100" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;">
+                <div class="product-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(25, 135, 84, 0.8); opacity: 0; transition: opacity 0.3s ease;">
+                  <button class="btn btn-light btn-lg rounded-pill px-4" onclick="openProductModal('hampers4')">
+                    <i class="bi bi-eye me-2"></i>View Details
+                  </button>
+                </div>
+                <span class="badge bg-dark position-absolute top-3 start-3 px-3 py-2">
+                  <i class="bi bi-gem me-1"></i>Premium
+                </span>
+              </div>
+              <div class="card-body p-4">
+                <h5 class="card-title fw-bold text-success mb-2">Hampers 4 Bottles Premium</h5>
+                <p class="card-text text-muted mb-3 small">Premium pack of 4 bottles with luxury packaging suitable for special gifts</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <span class="text-muted text-decoration-line-through small">Rp 72.000</span>
+                    <div class="price text-success fw-bold fs-5">Rp 60.000</div>
+                  </div>
+                  <button class="btn btn-success btn-sm rounded-pill px-3" onclick="addToCart('hampers4')">
+                    <i class="bi bi-cart-plus me-1"></i>Order
+                  </button>
+                </div>
+                <div class="rating mt-2">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <small class="text-muted ms-1">(5.0)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h3 class="fw-bold text-success mb-3">Ready to Enjoy the Deliciousness of Gressoy?</h3>
+            <p class="text-muted mb-4">Contact us now for orders or further information</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="https://wa.me/628568585172?text=Hello,%20I%20want%20to%20order%20Gressoy%20products" class="btn btn-success btn-lg rounded-pill px-4">
+                <i class="bi bi-whatsapp me-2"></i>Order Via WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container py-5">
+
+  <!-- Fitur pemesanan WhatsApp telah dihapus sesuai permintaan -->
+    </section>
+  </main>
+
+  <footer id="footer" class="bg-light mt-5">
+    <div class="container text-center py-4">
+      <img src="assets/BG Gressoy.png" alt="Gressoy Logo" class="footer-logo mb-3" style="max-height: 80px; width: auto;">
+      <p>Fresh Soy Milk for Your Health</p>
+      <div class="social-links mb-3">
+        <a href="https://www.instagram.com/gressoy.id" class="instagram fs-3"><i class="bi bi-instagram"></i></a>
+      </div>
+      <div class="copyright text-muted">
+        &copy; Copyright <strong><span>Gressoy</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    /* Custom animations and styles */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+    
+    .animate-slide-up {
+      animation: slideUp 1.2s ease-out;
+    }
+    
+    /* Product card hover effects */
+    .product-card {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+    }
+    
+    .product-card:hover .product-image {
+      transform: scale(1.05);
+    }
+    
+    .product-card:hover .product-overlay {
+      opacity: 1 !important;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 60px 0 !important;
+      }
+      
+      .display-4 {
+        font-size: 2.5rem !important;
+      }
+      
+      .product-card .card-body {
+        padding: 1rem !important;
+      }
+      
+      .price {
+        font-size: 1.1rem !important;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .hero-section {
+        padding: 40px 0 !important;
+      }
+      
+      .display-4 {
+        font-size: 2rem !important;
+      }
+      
+      .filter-buttons .btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+      }
+      
+      .product-image-container {
+        height: 250px !important;
+      }
+      
+      .product-image {
+        height: 250px !important;
+      }
+    }
+    
+    /* Loading animation */
+    .loading {
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+    }
+    
+    /* Cart animation */
+    @keyframes addToCart {
+      0% { transform: scale(1); }
+      50% { transform: scale(0.95); }
+      100% { transform: scale(1); }
+    }
+    
+    .cart-animation {
+      animation: addToCart 0.3s ease;
+    }
+  </style>
+
+  <!-- Product Modal -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content border-0 rounded-4">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold text-success" id="productModalLabel">Product Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img id="modalProductImage" src="" alt="Product" class="img-fluid rounded-3 w-100">
+            </div>
+            <div class="col-md-6">
+              <h4 id="modalProductName" class="fw-bold text-success mb-3"></h4>
+              <p id="modalProductDescription" class="text-muted mb-4"></p>
+              <div class="mb-3">
+                <span class="badge bg-success px-3 py-2 me-2">✓ Lactose Free</span>
+                <span class="badge bg-success px-3 py-2 me-2">✓ Rich in Protein</span>
+                <span class="badge bg-success px-3 py-2">✓ Low Calorie</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="price text-success fw-bold fs-3" id="modalProductPrice"></div>
+                <div class="rating">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <small class="text-muted ms-1">(4.9)</small>
+                </div>
+              </div>
+              <div class="d-grid">
+                <button class="btn btn-success btn-lg rounded-pill" onclick="orderProduct()">
+                  <i class="bi bi-whatsapp me-2"></i>Order Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  
+  <script>
+    // Product data
+    const products = {
+      original: {
+        name: 'Gressoy Original',
+        price: 'Rp 15.000',
+        image: 'img/Gressoy cup 2.JPEG.jpg',
+        description: 'Pure soy milk with a refreshing characteristic taste. Produced from selected soybeans with hygienic processes to maintain quality and nutrition. Rich in plant protein, isoflavones, and vitamins that are good for body health.'
+      },
+      vanilla: {
+        name: 'Gressoy Vanilla',
+        price: 'Rp 18.000',
+        image: 'img/Gressoy cup.JPEG.jpg',
+        description: 'Perfect blend of soy milk with soft and sweet vanilla aroma. Provides a creamy and pleasant taste sensation. Suitable for all ages and a favorite choice for various occasions.'
+      },
+      redvelvet: {
+        name: 'Gressoy Red Velvet',
+        price: 'Rp 20.000',
+        image: 'img/Gressoy Redvelvet.JPEG.jpg',
+        description: 'Latest innovation with unique and appetizing red velvet flavor. The combination of sweet and slightly sour taste characteristic of red velvet provides an unforgettable drinking experience.'
+      },
+      hampers2: {
+        name: 'Hampers 2 Bottles',
+        price: 'Rp 30.000',
+        image: 'img/Gressoy Hampers 2.PNG',
+        description: 'Value pack of 2 Gressoy bottles with exclusive packaging. Suitable for gifts or family consumption. Available in combinations of flavor variants according to your choice.'
+      },
+      hampers3: {
+        name: 'Hampers 3 Bottles',
+        price: 'Rp 45.000',
+        image: 'img/Gressoy Hampers 3.PNG',
+        description: 'Family pack of 3 bottles with different flavor variants in one package. Perfect solution for family needs or gatherings with friends.'
+      },
+      hampers4: {
+        name: 'Hampers 4 Bottles Premium',
+        price: 'Rp 60.000',
+        image: 'img/Gressoy Hampers.PNG',
+        description: 'Premium pack of 4 bottles with luxury packaging suitable for special gifts. Complete with exclusive packaging that is elegant and high quality.'
+      }
+    };
+
+    // Scroll animations
+    document.addEventListener('DOMContentLoaded', function() {
+      // Scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animation = 'fadeIn 0.6s ease-out';
+          }
+        });
+      }, observerOptions);
+
+      productItems.forEach(item => {
+        observer.observe(item);
+      });
+    });
+
+    // Product modal functions
+    function openProductModal(productId) {
+      const product = products[productId];
+      if (product) {
+        document.getElementById('modalProductName').textContent = product.name;
+        document.getElementById('modalProductPrice').textContent = product.price;
+        document.getElementById('modalProductImage').src = product.image;
+        document.getElementById('modalProductDescription').textContent = product.description;
+        
+        const modal = new bootstrap.Modal(document.getElementById('productModal'));
+        modal.show();
+      }
+    }
+
+    // Add to cart function
+    function addToCart(productId) {
+      const product = products[productId];
+      if (product) {
+        // Add animation effect
+        event.target.classList.add('cart-animation');
+        
+        setTimeout(() => {
+          event.target.classList.remove('cart-animation');
+        }, 300);
+
+        // Show success message
+        const message = `${product.name} has been added! Please contact us to continue the order.`;
+        
+        if (confirm(message + '\n\nWould you like to continue to WhatsApp?')) {
+          const whatsappMessage = `Hello, I want to order ${product.name} (${product.price}). Thank you!`;
+          const whatsappUrl = `https://wa.me/628568585172?text=${encodeURIComponent(whatsappMessage)}`;
+          window.open(whatsappUrl, '_blank');
+        }
+      }
+    }
+
+    // Order product from modal
+    function orderProduct() {
+      const productName = document.getElementById('modalProductName').textContent;
+      const productPrice = document.getElementById('modalProductPrice').textContent;
+      
+      const whatsappMessage = `Hello, I want to order ${productName} (${productPrice}). Please provide more information. Thank you!`;
+      const whatsappUrl = `https://wa.me/628568585172?text=${encodeURIComponent(whatsappMessage)}`;
+      window.open(whatsappUrl, '_blank');
+      
+      // Close modal
+      const modal = bootstrap.Modal.getInstance(document.getElementById('productModal'));
+      modal.hide();
+    }
+
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

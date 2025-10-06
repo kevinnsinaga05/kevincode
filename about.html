@@ -1,326 +1,242 @@
-
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Tentang Kami - Gressoy</title>
-	<meta name="description" content="Gressoy - Susu kedelai segar dan berkualitas untuk kesehatan keluarga Indonesia">
-	<meta name="keywords" content="susu kedelai, minuman sehat, gressoy, soy milk, kesehatan, makanan sehat">
-	<link href="assets/img/favicon.png" rel="icon">
-	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Poppins:300,400,500,600,700" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-	<link href="assets/css/style.css" rel="stylesheet">
-	<style>
-		.navbar-logo, .footer-logo {
-			border: none !important;
-			border-radius: 0 !important;
-			box-shadow: none !important;
-			outline: none !important;
-			background: transparent !important;
-		}
-		.navbar-logo:focus, .footer-logo:focus,
-		.navbar-logo:active, .footer-logo:active {
-			border: none !important;
-			outline: none !important;
-			box-shadow: none !important;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding-top: 100px; /* Add spacing to prevent navbar overlap */
+        }
+        .hero {
+            background: linear-gradient(to right, #198754, #28a745);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+        .section-title {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .section-title h2 {
+            font-size: 2rem;
+            color: #198754;
+            font-weight: bold;
+        }
+        .values {
+            padding: 2rem 0;
+        }
+        .value-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        .value-card h5 {
+            color: #198754;
+            margin-top: 1rem;
+        }
+        .timeline {
+            padding: 2rem 0;
+        }
+        .timeline-item {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .timeline-item h5 {
+            color: #198754;
+            font-weight: bold;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .hero img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+        }
+        .hero img:hover {
+            transform: scale(1.1); /* Slightly enlarge the logo on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Add a more prominent shadow */
+        }
+        
+        /* Navbar hover effect - sama seperti index.html */
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(25, 135, 84, 0.1) !important;
+            color: #198754 !important;
+            text-decoration: none !important;
+            box-shadow: 0 2px 4px rgba(25, 135, 84, 0.2);
+        }
+    </style>
 </head>
 <body>
-	<!-- ======= Header ======= -->
-	<header id="header" class="fixed-top d-flex align-items-center bg-white shadow-sm">
-		<div class="container d-flex align-items-center justify-content-between">
-			<h1 class="logo">
-				<a href="index.html">
-					<img src="assets/BG Gressoy.jpg" alt="Gressoy Logo" class="navbar-logo" style="height: 120px; border: none; box-shadow: none;">
-				</a>
-			</h1>
-			<nav id="navbar" class="navbar">
-				<ul>
-					<li><a class="nav-link scrollto" href="index.html#social-media">Media Sosial</a></li>
-					<li><a class="nav-link scrollto" href="index.html#lokasi">Lokasi</a></li>
-					<li><a class="nav-link scrollto" href="index.html#order">Pesan Online</a></li>
-					<li><a href="about.html" class="active" aria-current="page">Tentang Kami</a></li>
-					<li><a href="wedding.html">Paket Wedding</a></li>
-					<li><a class="nav-link scrollto" href="#review">Review Pelanggan</a></li>
-					<li><a class="btn btn-success" href="https://wa.me/628971541087?text=Halo,%20saya%20tertarik%20dengan%20kemitraan" target="_blank">WhatsApp Kemitraan</a></li>
-				</ul>
-				<i class="bi bi-list mobile-nav-toggle"></i>
-			</nav>
-		</div>
-	</header>
+    <!-- Navbar -->
+    <header id="header" class="fixed-top bg-white shadow-sm">
+        <div class="container d-flex align-items-center justify-content-between py-2">
+            <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none" style="height:100px;">
+                <img src="assets/BG Gressoy.png" alt="Gressoy Logo" style="height: 90px; width:auto; border:none; box-shadow:none; background:transparent; display:block;">
+            </a>
+            <nav id="navbar" class="navbar d-flex align-items-center" style="height:100px;">
+                <ul class="mb-0 d-flex align-items-center" style="gap:2rem; list-style:none; height:100%; align-items:center;">
+                    <li><a class="nav-link scrollto fw-semibold px-3 py-2 rounded" href="index.html#social-media" style="color:#198754;">Social Media</a></li>
+                    <li><a class="nav-link scrollto fw-semibold px-3 py-2 rounded" href="index.html#lokasi" style="color:#198754;">Location</a></li>
+                    <li><a class="nav-link scrollto fw-semibold px-3 py-2 rounded" href="index.html#order" style="color:#198754;">Order Online</a></li>
+                    <li><a href="about.html" class="nav-link scrollto fw-semibold px-3 py-2 rounded" style="color:#198754;">About Us</a></li>
+                    <li><a href="produk.html" class="nav-link scrollto fw-semibold px-3 py-2 rounded" style="color:#198754;">Products</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <!-- Section Intro -->
+    <header class="hero">
+        <img src="assets/BG Gressoy.png" alt="Gressoy Logo" style="width: 25%; height: auto; border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);"> <!-- Adjusted size for better fit -->
+        <p>Crafting healthy and delicious beverages for everyone.</p>
+    </header>
 
+    <!-- <section class="container values">
+        <div class="section-title">
+            <h2>Our Core Values</h2>
+            <p>What drives us to deliver the best to our customers.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="value-card">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipNTY3KTHeRWTdCflAm-mS_yn_63QjR-uKyuIJDB=w243-h244-n-k-no-nu" alt="Quality" class="img-fluid" style="max-width: 80px;">
+                    <h5>Quality</h5>
+                    <p>We ensure the highest standards in every product we make.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="value-card">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipPo35cl4z_ebRUZxIPIogjV5mpWJ1qf_3zyt5Em=w243-h406-n-k-no-nu" alt="Innovation" class="img-fluid" style="max-width: 80px;">
+                    <h5>Innovation</h5>
+                    <p>Continuously improving and creating new experiences.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="value-card">
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrETT_svRO074UzFTqeWYGHmYX1xaIo3nh8mm9MEF9XpYgl5vyuepFfGDqrjuNIaduknvYhRrWARi2OD5_GQ9-lW5y4Hvco3KrXAyMvOEzjto9pzNr9AUrVP7SraCOSx82nls-gxwZPjw1w=w243-h244-n-k-no-nu" alt="Sustainability" class="img-fluid" style="max-width: 80px;">
+                    <h5>Sustainability</h5>
+                    <p>Committed to eco-friendly practices for a better future.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
-	<main id="main" style="margin-top: 140px;">
-		<!-- Hero Section Baru: Lebih Indah & Modern -->
-		<section class="about-hero position-relative d-flex align-items-center justify-content-center text-center mb-5" style="overflow:hidden;min-height:60vh;background:radial-gradient(circle at 70% 20%, #e0f7e9 0%, #f8fff8 100%);">
-			<!-- SVG Blob Dekorasi Kiri -->
-			<svg class="about-blob-1 position-absolute" style="top:-80px;left:-120px;width:320px;height:320px;z-index:1;opacity:.25;" viewBox="0 0 320 320" fill="none"><ellipse cx="160" cy="160" rx="160" ry="120" fill="#43ea7a"/></svg>
-			<!-- SVG Blob Dekorasi Kanan -->
-			<svg class="about-blob-2 position-absolute" style="bottom:-100px;right:-100px;width:260px;height:260px;z-index:1;opacity:.18;" viewBox="0 0 260 260" fill="none"><ellipse cx="130" cy="130" rx="130" ry="100" fill="#fbc02d"/></svg>
-			<div class="container position-relative z-2 py-5" data-aos="fade-down">
-				<div class="about-card mx-auto p-4 p-md-5 rounded-4 shadow-lg bg-white position-relative" style="max-width:420px;">
-					<img src="assets/BG Gressoy.jpg" alt="Gressoy - Plant Based Milk" class="about-logo mb-3">
-					<div class="about-divider mx-auto mb-3"></div>
-					<p class="about-desc mb-3">
-						Susu kedelai segar, sehat, dan berkualitas untuk keluarga Indonesia.<br>
-						Kami berkomitmen menghadirkan produk terbaik dengan pelayanan profesional dan ramah.
-					</p>
-				</div>
-			</div>
-		</section>
+    <!-- Section: Our Journey -->
+    <section class="container timeline my-4">
+        <div class="section-title">
+            <h2>Our Journey</h2>
+            <p>Milestones that define our growth and success.</p>
+        </div>
+        <div class="timeline-item">
+            <h5>2019 - The Beginning</h5>
+            <p>Gressoy was founded with a vision to provide healthy beverages.</p>
+        </div>
+        <div class="timeline-item">
+            <h5>2022 - First Outlet</h5>
+            <p>We opened our first store in Purwokerto, marking our official launch.</p>
+        </div>
+        <div class="timeline-item">
+            <h5>2025 - Going Digital</h5>
+            <p>Expanded our presence online to reach more customers nationwide.</p>
+        </div>
+    </section>
 
-		<!-- Divider -->
-		<div class="container mb-4">
-			<div class="ornamental-divider mx-auto">
-				<span class="divider-dot"></span>
-				<span class="divider-line"></span>
-				<span class="divider-dot"></span>
-			</div>
-		</div>
+    <!-- Section: Vision & Mission -->
+    <section class="container vision-mission my-4"> 
+        <div class="section-title">
+            <h2>Vision & Mission</h2>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-6 mb-4">
+                <div class="p-4 bg-white rounded shadow-sm">
+                    <h5 class="text-success fw-bold">Vision</h5>
+                    <p>To be the leading provider of healthy and delicious beverages, inspiring a healthier lifestyle for everyone.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="p-4 bg-white rounded shadow-sm">
+                    <h5 class="text-success fw-bold">Mission</h5>
+                    <p>To craft beverages with the highest quality ingredients, ensuring sustainability and innovation in every sip.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!-- Visi & Misi Section -->
-		<section class="container mb-5">
-			<div class="row justify-content-center align-items-stretch g-4">
-				<div class="col-md-6">
-					<div class="card visi-misi-card shadow-sm h-100" data-aos="fade-right">
-						<div class="card-body">
-							<h4 class="card-title mb-3 text-success fw-bold"><i class="bi bi-eye"></i> Visi</h4>
-							<p class="card-text">Menjadi pelopor minuman sehat berbasis nabati yang digemari dan dipercaya keluarga Indonesia.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="card visi-misi-card shadow-sm h-100" data-aos="fade-left">
-						<div class="card-body">
-							<h4 class="card-title mb-3 text-success fw-bold"><i class="bi bi-bullseye"></i> Misi</h4>
-							<ul class="card-text ps-3 mb-0">
-								<li>Menghadirkan produk susu kedelai berkualitas tinggi dan aman dikonsumsi.</li>
-								<li>Memberikan pelayanan ramah, profesional, dan edukatif.</li>
-								<li>Mendukung gaya hidup sehat dan ramah lingkungan.</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+    <!-- Google Review -->
+    <section class="container google-reviews my-5">
+        <div class="section-title">
+            <h2>What Our Customers Say</h2>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="p-4 bg-white rounded shadow-sm">
+                    <p class="fw-semibold">The soy milk tastes good and comes in many varieties. Highly recommended for consumption. The service is also great... A must-try 😁.</p>
+                    <p class="text-muted">- Stefanus Sirait</p>
+                    <p class="text-warning">★★★★★</p> <!-- Added 5-star rating -->
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="p-4 bg-white rounded shadow-sm">
+                    <p class="fw-semibold">It tastes very different from other soy milks, not bland, and has a rich flavor. The service is also friendly. The only downside is that the place is a bit cramped, because the atmosphere is actually nice for studying. Overall good🤩</p>
+                    <p class="text-muted">- Hindun Afni Al Haya</p>
+                    <p class="text-warning">★★★★★</p> <!-- Added 5-star rating -->
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="p-4 bg-white rounded shadow-sm">
+                    <p class="fw-semibold">Vegans who want to drink plant-based milk will definitely RECOMMEND this. It's sweet and delicious, and the soybeans are smooth so it's not cloying. If you want to hang out, it's a comfortable place. The staff are also friendly and fun to talk to. It's definitely worth a try 😀😀</p>
+                    <p class="text-muted">- Hendra Gunawan Cristian Tamba</p>
+                    <p class="text-warning">★★★★★</p> <!-- Added 5-star rating -->
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!-- Divider -->
-		<div class="container mb-4">
-			<div class="ornamental-divider mx-auto">
-				<span class="divider-dot"></span>
-				<span class="divider-line"></span>
-				<span class="divider-dot"></span>
-			</div>
-		</div>
+      <!-- ======= Footer ======= -->
+  <footer id="footer" class="bg-light">
+    <div class="container text-center py-4">
+  <img src="assets/BG Gressoy.png" alt="Gressoy Logo" class="footer-logo mb-3" style="max-height: 80px; width: auto; border:none; box-shadow:none; background:transparent;">
+      <p>Fresh Soy Milk for Your Health</p>
+      <div class="social-links mb-3">
+        <a href="https://www.instagram.com/gressoy.id" target="_blank" class="instagram fs-3 text-success"><i class="bi bi-instagram"></i></a>
+      </div>
+      <div class="copyright text-muted">
+        &copy; Copyright <strong><span>Gressoy</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
 
-		<!-- Galeri Mini: Gambar Brand & Pelanggan -->
-		<section class="container mb-5">
-			<!-- Foto pelanggan dihapus sesuai permintaan -->
-		</section>
-
-		<!-- Review Pelanggan -->
-		<section id="review" class="container mb-5">
-			<div class="section-title text-center mb-4">
-				<h2 class="fw-bold text-success">Review Pelanggan</h2>
-				<p class="review-intro">Katanya enak? Masasih?</p>
-</style>
-<style>
-.review-intro {
-	font-family: 'Poppins', 'Nunito', Arial, sans-serif;
-	font-size: 1.25rem;
-	font-weight: 500;
-	color: #222;
-	text-align: center;
-	letter-spacing: 0.01em;
-	margin-bottom: 1.5rem;
-	background: linear-gradient(90deg, #e8ffe8 0%, #f8fff8 100%);
-	border-radius: 1.2rem;
-	padding: 0.7rem 1.2rem;
-	box-shadow: 0 2px 12px rgba(40,167,69,0.07);
-	display: inline-block;
-}
-</style>
-			</div>
-			<div class="row justify-content-center g-4">
-				<div class="col-md-4">
-					<div class="card shadow-sm h-100 border-0">
-						<div class="card-body">
-							<div class="d-flex align-items-center mb-3">
-								<img src="adrian.jpg" alt="reviewer 1" class="rounded-circle me-3" style="width:48px;height:48px;object-fit:cover;">
-								<div>
-									<h6 class="mb-0">Adrian, Mahasiswa Telkom University Telkom</h6>
-									<small class="text-warning">★★★★★</small>
-								</div>
-							</div>
-							<blockquote class="mb-0 text-secondary">Susu kedelai Gressoy rasanya enak dan segar. Pelayanannya juga ramah.</blockquote>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card shadow-sm h-100 border-0">
-						<div class="card-body">
-							<div class="d-flex align-items-center mb-3">
-								<img src="kevin.jpg" alt="kevin" class="rounded-circle me-3" style="width:48px;height:48px;object-fit:cover;">
-								<div>
-									<h6 class="mb-0">Kevin, Mahasiswa Telkom University Purwokerto</h6>
-									<small class="text-warning">★★★★★</small>
-								</div>
-							</div>
-							<blockquote class="mb-0 text-secondary">Rasanya lebih fresh,engga langu,dan tempatnya nyaman</blockquote>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card shadow-sm h-100 border-0">
-						<div class="card-body">
-							<div class="d-flex align-items-center mb-3">
-								<img src="knonita.jpg" alt="reviewer 3" class="rounded-circle me-3" style="width:48px;height:48px;object-fit:cover;">
-								<div>
-									<h6 class="mb-0">Nonita, Alumni FEB Unsoed 2019</h6>
-									<small class="text-warning">★★★★★</small>
-								</div>
-							</div>
-							<blockquote class="mb-0 text-secondary">"Gressoy pilihan tepat buat yang ingin hidup sehat. Rasanya pas, tidak terlalu manis, dan selalu fresh!"</blockquote>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</section>
-	</main>
-
-	<style>
-		.navbar-logo, .footer-logo {
-			border: none !important;
-			border-radius: 0 !important;
-			box-shadow: none !important;
-			outline: none !important;
-			background: transparent !important;
-		}
-		.navbar-logo:focus, .footer-logo:focus,
-		.navbar-logo:active, .footer-logo:active {
-			border: none !important;
-			outline: none !important;
-			box-shadow: none !important;
-		}
-
-		/* About Hero Section Baru */
-		.about-hero {
-			background: radial-gradient(circle at 70% 20%, #e0f7e9 0%, #f8fff8 100%);
-			min-height: 60vh;
-			position: relative;
-		}
-		.about-card {
-			background: #fff;
-			border-radius: 32px;
-			box-shadow: 0 8px 32px rgba(60, 120, 80, 0.12);
-			padding: 48px 36px;
-			max-width: 420px;
-			text-align: center;
-			position: relative;
-			animation: fadeInUp 1s;
-		}
-		.about-logo {
-			width: 120px;
-			margin-bottom: 18px;
-			filter: drop-shadow(0 2px 8px #b2dfdb);
-			border-radius: 18px;
-		}
-		.about-title {
-			font-family: 'Poppins', sans-serif;
-			font-size: 2.2rem;
-			color: #2e7d32;
-			margin-bottom: 12px;
-			letter-spacing: 1px;
-		}
-		.about-title span {
-			color: #fbc02d;
-		}
-		.about-desc {
-			color: #333;
-			font-size: 1.15rem;
-			margin-bottom: 24px;
-			line-height: 1.6;
-		}
-		.about-divider {
-			width: 60px;
-			height: 4px;
-			background: linear-gradient(90deg, #43ea7a, #fbc02d);
-			border-radius: 2px;
-			margin: 0 auto 18px auto;
-		}
-		.about-icons {
-			font-size: 2rem;
-			color: #43ea7a;
-			display: flex;
-			justify-content: center;
-			gap: 18px;
-		}
-		@keyframes fadeInUp {
-			from { opacity: 0; transform: translateY(40px);}
-			to { opacity: 1; transform: translateY(0);}
-		}
-
-		/* Divider Ornamental */
-		.ornamental-divider {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			gap: 10px;
-			margin-bottom: 12px;
-		}
-		.divider-dot {
-			width: 12px;
-			height: 12px;
-			background: #43ea7a;
-			border-radius: 50%;
-			display: inline-block;
-			box-shadow: 0 2px 8px #b2dfdb;
-		}
-		.divider-line {
-			width: 60px;
-			height: 4px;
-			background: linear-gradient(90deg, #43ea7a, #fbc02d);
-			border-radius: 2px;
-			display: inline-block;
-		}
-
-		@media (max-width: 600px) {
-			.about-card {
-				padding: 24px 10px;
-				max-width: 98vw;
-			}
-			.about-logo {
-				width: 80px;
-			}
-		}
-	</style>
-
-	<!-- ======= Footer ======= -->
-	<footer id="footer" class="bg-light">
-		<div class="container text-center py-4">
-			<img src="assets/BG Gressoy.jpg" alt="Gressoy Logo" class="footer-logo mb-3" style="max-height: 120px; width: auto;">
-			<p>Susu Kedelai Segar untuk Kesehatan Anda</p>
-			<div class="social-links mb-3">
-				<a href="https://www.instagram.com/gressoy.id" class="instagram fs-3"><i class="bx bxl-instagram"></i></a>
-			</div>
-			<div class="copyright text-muted">
-				&copy; Hak Cipta <strong><span>Gressoy</span></strong>. Seluruh Hak Dilindungi
-			</div>
-		</div>
-	</footer>
-
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script src="assets/vendor/aos/aos.js"></script>
-		<script>
-			if (window.AOS) AOS.init({ once: true, duration: 700, offset: 60 });
-		</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

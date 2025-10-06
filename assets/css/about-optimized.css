@@ -1,0 +1,134 @@
+/* Timeline optimization styles */
+.timeline-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+	order: 3;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+	order: 2;
+}
+
+.timeline-item:nth-child(even) .timeline-empty {
+	order: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+	order: 1;
+	text-align: right;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+	order: 2;
+}
+
+.timeline-item:nth-child(odd) .timeline-empty {
+	order: 3;
+}
+
+.timeline-content, .timeline-empty {
+	flex: 5;
+	padding: 0 1rem;
+}
+
+.timeline-dot {
+	flex: 2;
+	display: flex;
+	justify-content: center;
+}
+
+.timeline-dot-circle {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.timeline-content-box {
+	background: #f8f9fa;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.team-card, .value-card, .stat-card {
+	padding: 2rem 1.5rem;
+	background: #f8f9fa;
+	border: 1px solid #e9ecef;
+	border-radius: 1rem;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+	height: 100%;
+	text-align: center;
+}
+
+.team-avatar, .value-icon, .stat-icon {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin: 0 auto 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2.5rem;
+	box-shadow: 0 6px 20px rgba(25, 135, 84, 0.3);
+}
+
+/* About Hero Section */
+.about-hero {
+	background: radial-gradient(circle at 70% 20%, #e0f7e9 0%, #f8fff8 100%);
+	min-height: 40vh;
+	position: relative;
+}
+
+.about-card-glass {
+	background: rgba(255,255,255,0.9);
+	border-radius: 2rem;
+	box-shadow: 0 8px 32px rgba(60, 120, 80, 0.13);
+	max-width: 800px;
+}
+
+.about-logo-fancy {
+	border: 2px solid #fbc02d;
+	background: #fff;
+	border-radius: 1rem;
+}
+
+/* Dividers */
+.ornamental-divider {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 2rem 0;
+}
+
+.divider-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #28a745;
+	margin: 0 0.5rem;
+}
+
+.divider-line {
+	flex: 1;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, #28a745, transparent);
+	max-width: 200px;
+}
+
+/* Visi Misi Cards */
+.visi-misi-card {
+	border: 1px solid #e9ecef;
+	border-radius: 1rem;
+	transition: transform 0.3s ease;
+}
+
+.visi-misi-card:hover {
+	transform: translateY(-5px);
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <meta name="google-site-verification" content="sScSSVC4YjlvL_x1y94jFTFVj4JabPpPrUo007hUkf8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding-top: 100px; /* Add spacing to prevent navbar overlap */
+        }
+        .hero {
+            background: linear-gradient(to right, #198754, #28a745);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+        .section-title {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .section-title h2 {
+            font-size: 2rem;
+            color: #198754;
+            font-weight: bold;
+        }
+        .values {
+            padding: 2rem 0;
+        }
+        .value-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        .value-card h5 {
+            color: #198754;
+            margin-top: 1rem;
+        }
+        .timeline {
+            padding: 2rem 0;
+        }
+        .timeline-item {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .timeline-item h5 {
+            color: #198754;
+            font-weight: bold;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .hero img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+        }
+        .hero img:hover {
+            transform: scale(1.1); /* Slightly enlarge the logo on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Add a more prominent shadow */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header id="header" class="fixed-top bg-white shadow-sm">
+        <div class="container d-flex align-items-center justify-content-between py-2">
+            <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none" style="height:100px;">
+                <img src="assets/BG Gressoy.png" alt="Gressoy Logo" style="height: 90px; width:auto; border:none; box-shadow:none; background:transparent; display:block;">
+            </a>
+            <nav id="navbar" class="navbar d-flex align-items-center" style="height:100px;">
+                <ul class="mb-0 d-flex align-items-center" style="gap:2rem; list-style:none; height:100%; align-items:center;">
+                    <li><a class="nav-link scrollto fw-semibold px-3 py-2 rounded" href="#social-media" style="color:#198754;">Media Sosial</a></li>
+                    <li><a class="nav-link scrollto fw-semibold px-3 py-2 rounded" href="#lokasi" style="color:#198754;">Lokasi</a></li>
+                    <li><a class="nav-link scrollto fw-semibold px-3 py-2 rounded" href="#order" style="color:#198754;">Pesan Online</a></li>
+                    <li><a href="about.html" class="nav-link scrollto fw-semibold px-3 py-2 rounded" style="color:#198754;">Tentang Kami</a></li>
+                    <li><a href="produk.html" class="nav-link scrollto fw-semibold px-3 py-2 rounded" style="color:#198754;">Produk</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle" style="cursor: pointer; touch-action: manipulation; font-size: 24px; color: #198754;"></i>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Intro -->
+    <header class="hero">
+        <img src="assets/BG Gressoy.png" alt="Gressoy Logo" style="width: 25%; height: auto; border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);"> <!-- Adjusted size for better fit -->
+        <p>Crafting healthy and delicious beverages for everyone.</p>
+    </header>
+
+    <!-- <section class="container values">
+        <div class="section-title">
+            <h2>Our Core Values</h2>
+            <p>What drives us to deliver the best to our customers.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="value-card">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipNTY3KTHeRWTdCflAm-mS_yn_63QjR-uKyuIJDB=w243-h244-n-k-no-nu" alt="Quality" class="img-fluid" style="max-width: 80px;">
+                    <h5>Quality</h5>
+                    <p>We ensure the highest standards in every product we make.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="value-card">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipPo35cl4z_ebRUZxIPIogjV5mpWJ1qf_3zyt5Em=w243-h406-n-k-no-nu" alt="Innovation" class="img-fluid" style="max-width: 80px;">
+                    <h5>Innovation</h5>
+                    <p>Continuously improving and creating new experiences.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="value-card">
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrETT_svRO074UzFTqeWYGHmYX1xaIo3nh8mm9MEF9XpYgl5vyuepFfGDqrjuNIaduknvYhRrWARi2OD5_GQ9-lW5y4Hvco3KrXAyMvOEzjto9pzNr9AUrVP7SraCOSx82nls-gxwZPjw1w=w243-h244-n-k-no-nu" alt="Sustainability" class="img-fluid" style="max-width: 80px;">
+                    <h5>Sustainability</h5>
+                    <p>Committed to eco-friendly practices for a better future.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Section: Our Journey -->
+    <section class="container timeline my-4">
+        <div class="section-title">
+            <h2>Our Journey</h2>
+            <p>Milestones that define our growth and success.</p>
+        </div>
+        <div class="timeline-item">
+            <h5>2019 - The Beginning</h5>
+            <p>Gressoy was founded with a vision to provide healthy beverages.</p>
+        </div>
+        <div class="timeline-item">
+            <h5>2022 - First Outlet</h5>
+            <p>We opened our first store in Purwokerto, marking our official launch.</p>
+        </div>
+        <div class="timeline-item">
+            <h5>2025 - Going Digital</h5>
+            <p>Expanded our presence online to reach more customers nationwide.</p>
+        </div>
+    </section>
+
+    <!-- Section: Vision & Mission -->
+    <section class="container vision-mission my-4"> 
+        <div class="section-title">
+            <h2>Vision & Mission</h2>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-6 mb-4">
+                <div class="p-4 bg-white rounded shadow-sm">
+                    <h5 class="text-success fw-bold">Vision</h5>
+                    <p>To be the leading provider of healthy and delicious beverages, inspiring a healthier lifestyle for everyone.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="p-4 bg-white rounded shadow-sm">
+                    <h5 class="text-success fw-bold">Mission</h5>
+                    <p>To craft beverages with the highest quality ingredients, ensuring sustainability and innovation in every sip.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Review -->
+    <section class="container google-reviews my-5">
+        <div class="section-title">
+            <h2>What Our Customers Say</h2>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="p-4 bg-white rounded shadow-sm">
+                    <p class="fw-semibold">The soy milk tastes good and comes in many varieties. Highly recommended for consumption. The service is also great... A must-try 😁.</p>
+                    <p class="text-muted">- Stefanus Sirait</p>
+                    <p class="text-warning">★★★★★</p> <!-- Added 5-star rating -->
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="p-4 bg-white rounded shadow-sm">
+                    <p class="fw-semibold">It tastes very different from other soy milks, not bland, and has a rich flavor. The service is also friendly. The only downside is that the place is a bit cramped, because the atmosphere is actually nice for studying. Overall good🤩</p>
+                    <p class="text-muted">- Hindun Afni Al Haya</p>
+                    <p class="text-warning">★★★★★</p> <!-- Added 5-star rating -->
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="p-4 bg-white rounded shadow-sm">
+                    <p class="fw-semibold">Vegans who want to drink plant-based milk will definitely RECOMMEND this. It's sweet and delicious, and the soybeans are smooth so it's not cloying. If you want to hang out, it's a comfortable place. The staff are also friendly and fun to talk to. It's definitely worth a try 😀😀</p>
+                    <p class="text-muted">- Hendra Gunawan Cristian Tamba</p>
+                    <p class="text-warning">★★★★★</p> <!-- Added 5-star rating -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- ======= Footer ======= -->
+  <footer id="footer" class="bg-light">
+    <div class="container text-center py-4">
+  <img src="assets/BG Gressoy.png" alt="Gressoy Logo" class="footer-logo mb-3" style="max-height: 80px; width: auto; border:none; box-shadow:none; background:transparent;">
+      <p>Susu Kedelai Segar untuk Kesehatan Anda</p>
+      <div class="social-links mb-3">
+        <a href="https://www.instagram.com/gressoy.id" class="instagram fs-3"><i class="bx bxl-instagram"></i></a>
+      </div>
+      <div class="copyright text-muted">
+        &copy; Copyright <strong><span>Gressoy</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

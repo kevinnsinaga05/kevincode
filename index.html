@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
 
   <title>Gressoy</title>
-  <meta name="description" content="Gressoy - Susu kedelai segar dan berkualitas untuk kesehatan keluarga Indonesia">
-  <meta name="keywords" content="susu kedelai, minuman sehat, gressoy, soy milk, kesehatan, makanan sehat">
+  <meta name="description" content="Gressoy - Fresh and high-quality soy milk for Indonesian family health">
+  <meta name="keywords" content="soy milk, healthy drinks, gressoy, soy milk, health, healthy food">
   <meta name="google-site-verification" content="w8bBilRPA4rgEDHgtZs7JtW7Q-MSZAxWVl86GTbycqg" />
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="icon" type="image/png" href="assets/vendor/BG Gressoy.png">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Poppins:300,400,500,600,700|Nunito:400,500,600,700,800&display=swap" rel="stylesheet">
@@ -28,26 +30,167 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   
-  <!-- Remove border from logo images (moved to CSS file) -->
+  <!-- Mobile Optimization CSS -->
+  <style>
+    /* Fix untuk Android Touch Events */
+    * {
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+    }
+    
+    /* Perbaikan Mobile Navigation */
+    @media (max-width: 991px) {
+      .navbar ul {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: white !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+        border-radius: 0 0 10px 10px !important;
+        padding: 20px !important;
+        margin: 0 !important;
+        z-index: 9999 !important;
+        transform: translateY(-100%) !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: all 0.3s ease !important;
+      }
+      
+      .navbar ul.mobile-nav-active {
+        display: flex !important;
+        flex-direction: column !important;
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      
+      .navbar ul li {
+        width: 100% !important;
+        margin: 5px 0 !important;
+      }
+      
+      .navbar ul li a {
+        padding: 15px 20px !important;
+        display: block !important;
+        color: #333 !important;
+        border-bottom: 1px solid #eee !important;
+      }
+      
+      .mobile-nav-toggle {
+        display: block !important;
+        font-size: 24px !important;
+        cursor: pointer !important;
+        color: #333 !important;
+        z-index: 10000 !important;
+      }
+      
+      /* Perbaikan Header Mobile */
+      #header {
+        padding: 10px 0 !important;
+      }
+      
+      .logo-img {
+        height: 60px !important;
+      }
+    }
+    
+    /* Perbaikan Touch Events untuk Buttons */
+    .btn, button, a, .nav-link {
+      touch-action: manipulation !important;
+      -webkit-user-select: none !important;
+      user-select: none !important;
+    }
+    
+    /* Perbaikan untuk Dropdown */
+    .dropdown-menu {
+      position: absolute !important;
+      top: 100% !important;
+      left: 0 !important;
+      background: white !important;
+      border: 1px solid #ddd !important;
+      border-radius: 5px !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+      z-index: 1000 !important;
+      min-width: 200px !important;
+    }
+    
+    .dropdown-menu.show {
+      display: block !important;
+    }
+    
+    /* Perbaikan untuk Android - Button Sizing */
+    @media (max-width: 768px) {
+      .order-btn-custom {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+        padding: 18px 20px !important;
+        font-size: 18px !important;
+        font-weight: 600 !important;
+      }
+      
+      .hero-title {
+        font-size: 2rem !important;
+      }
+      
+      .hero-tagline {
+        font-size: 1rem !important;
+      }
+      
+      /* Perbaikan container mobile */
+      .container {
+        padding: 0 15px !important;
+      }
+      
+      /* Perbaikan iframe responsive */
+      iframe {
+        width: 100% !important;
+        height: 300px !important;
+      }
+      
+      /* Perbaikan phone mockup di mobile */
+      .mobile-mockup {
+        margin-top: 30px !important;
+      }
+      
+      .phone-frame-new {
+        max-width: 250px !important;
+        margin: 0 auto !important;
+      }
+    }
+    
+    /* Tambahan untuk iOS Safari */
+    @supports (-webkit-touch-callout: none) {
+      .btn, button, a {
+        cursor: pointer !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center bg-white shadow-sm">
-    <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo">
-        <a href="index.html">
-                      <img src="assets/BG Gressoy.jpg" alt="Gressoy Logo" class="navbar-logo" style="height: 120px; border: none; box-shadow: none;">
-        </a>
-      </h1>
+  <header id="header" class="fixed-top bg-white shadow-sm">
+    <div class="container d-flex align-items-center justify-content-between py-2">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="assets/BG Gressoy.png" alt="Gressoy Logo" class="logo-img">
+      </a>
+      
+      <!-- Navigation -->
       <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#social-media">Media Sosial</a></li>
-          <li><a class="nav-link scrollto" href="#lokasi">Lokasi</a></li>
-          <li><a class="nav-link scrollto" href="#order">Pesan Online</a></li>
-          <li><a href="about.html" class="nav-link scrollto">Tentang Kami</a></li>
-          <li><a href="wedding.html" class="nav-link scrollto">Paket Wedding</a></li>
-          <li><a class="btn btn-success" href="https://wa.me/628971541087?text=Halo,%20saya%20tertarik%20dengan%20kemitraan" target="_blank">WhatsApp Kemitraan</a></li>
+        <ul class="nav-list">
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle" onclick="toggleDropdown(event)"><i class="bi bi-share"></i> Social Media <i class="bi bi-chevron-down dropdown-arrow"></i></a>
+            <ul class="dropdown-menu" id="socialMediaMenu">
+              <li><a href="https://www.instagram.com/gressoy.id" target="_blank"><i class="bi bi-instagram"></i> Instagram</a></li>
+              <li><a href="https://www.tiktok.com/@gressoy.id" target="_blank"><i class="bx bxl-tiktok"></i> TikTok</a></li>
+            </ul>
+          </li>
+          <li><a href="#lokasi" class="nav-link"><i class="bi bi-geo-alt"></i> Location</a></li>
+          <li><a href="#order" class="nav-link"><i class="bi bi-cart"></i> Order Online</a></li>
+          <li><a href="about.html" class="nav-link"><i class="bi bi-info-circle"></i> About Us</a></li>
+          <li><a href="produk.html" class="nav-link"><i class="bi bi-box"></i> Products</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -55,53 +198,47 @@
   </header>
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center bg-light" style="min-height: 80vh;">
-    <div class="container text-center">
+  <section id="hero" class="d-flex align-items-center bg-light">
+    <div class="container hero-container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-lg-7 mx-auto text-center">
+          <h1 class="display-4 fw-bold mb-3 hero-title">
+            <span class="hero-brand">Gressoy</span>
+            <div class="hero-tagline">Healthy • Fresh • Delicious</div>
+          </h1>
+          <p class="lead mb-4 hero-description">
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ======= Mobile App Showcase ======= -->
-  <section id="mobile-showcase" class="py-5" style="background: linear-gradient(135deg, #28a745, #20c997);">
+  <section id="mobile-showcase" class="py-5 mobile-showcase-bg">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 text-white">
           <div class="showcase-content-box">
-            <h3 class="fw-bold mb-4">Nikmati Gressoy Kapan Saja!</h3>
-            <p class="fs-5 mb-4">Dapatkan susu kedelai segar berkualitas tinggi langsung dari smartphone Anda. Mudah, cepat, dan praktis!</p>
+            <h3 class="fw-bold mb-4">Enjoy Gressoy Anytime!</h3>
+            <p class="fs-5 mb-4">Get fresh high-quality soy milk directly from your smartphone. Easy, fast, and practical!</p>
             <ul class="list-unstyled mb-4">
-              <li class="mb-2"><i class="bx bx-check-circle text-warning"></i> Pesan langsung dari aplikasi</li>
-              <li class="mb-2"><i class="bx bx-check-circle text-warning"></i> Kualitas terjamin segar</li>
-              <li class="mb-2"><i class="bx bx-check-circle text-warning"></i> Delivery cepat ke rumah</li>
-              <li class="mb-2"><i class="bx bx-check-circle text-warning"></i> Harga terjangkau</li>
+              <li class="mb-2">Always fresh & hygienic</li>
+              <li class="mb-2">Fast & safe delivery</li>
+              <li class="mb-2">Affordable prices</li>
+              <li class="mb-2">Rich in plant protein & preservative-free</li>
             </ul>
-            <!-- Button group removed as per request -->
           </div>
         </div>
         <div class="col-lg-6 text-center">
           <div class="mobile-mockup position-relative">
-            <!-- Phone Frame Simplified -->
             <div class="phone-container">
               <div class="phone-frame-new">
                 <div class="phone-screen-new">
-                  <!-- Woman with drinks illustration -->
                   <div class="woman-illustration">
-                    <img src="assets/maskot-1.png" alt="Maskot Gressoy - Perempuan dengan minuman" class="maskot-image">
-                    <!-- App UI Elements Overlay -->
-                    <div class="app-overlay">
-                      <h6 class="app-title">Gressoy App</h6>
-                      <p class="app-subtitle">Minuman Sehat Keluarga</p>
-                      <div class="app-button">
-                        <span class="order-btn">Pesan Sekarang</span>
-                      </div>
-                    </div>
+                    <img src="assets/maskot-1.png" alt="Gressoy Mascot - Woman with drink" class="maskot-image">
                   </div>
                 </div>
-                <!-- Phone frame elements -->
-                <div class="phone-details">
-                  <div class="camera"></div>
-                  <div class="speaker"></div>
-                  <div class="home-button"></div>
-                </div>
+
               </div>
             </div>
           </div>
@@ -110,29 +247,26 @@
     </div>
   </section>
 
-  <main id="main">
-
-    <!-- Media Sosial -->
+    <!-- social media -->
     <section id="social-media" class="container py-5">
       <div class="section-title text-center">
-        <h2>Media Sosial</h2>
-        <p>Ikuti konten terbaru kami di platform media sosial</p>
+        <h2>Social Media</h2>
+        <p>Follow our latest content on social media platforms</p>
       </div>
-      
       <div class="row">
 
         <!-- Instagram -->
         <div class="col-md-6 mb-4">
           <div class="text-center">
             <h4 class="text-success mb-3">
-              <i class="bx bxl-instagram"></i> Instagram
+              Instagram
             </h4>
             <iframe src="https://www.instagram.com/gressoy.id/embed"
                     width="320" height="400" frameborder="0" scrolling="no" allowtransparency="true">
             </iframe>
             <div class="mt-3">
               <a href="https://www.instagram.com/gressoy.id" target="_blank" class="btn btn-outline-success">
-                <i class="bx bxl-instagram"></i> Kunjungi Instagram
+                Visit Instagram
               </a>
             </div>
           </div>
@@ -142,7 +276,7 @@
         <div class="col-md-6 mb-4">
           <div class="text-center">
             <h4 class="text-success mb-3">
-              <i class="bx bxl-tiktok"></i> TikTok
+              TikTok
             </h4>
             <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@gressoy.id" data-unique-id="gressoy.id" data-embed-type="creator" style="max-width: 780px; min-width: 288px;">
               <section>
@@ -152,99 +286,184 @@
             <script async src="https://www.tiktok.com/embed.js"></script>
             <div class="mt-3">
               <a href="https://www.tiktok.com/@gressoy.id?is_from_webapp=1&sender_device=pc" target="_blank" class="btn btn-outline-success">
-                <i class="bx bxl-tiktok"></i> Kunjungi TikTok
+                Visit TikTok
               </a>
             </div>
           </div>
         </div>
       </div>
-      
       <script async src="https://www.tiktok.com/embed.js"></script>
     </section>
 
     <!-- Google Maps -->
     <section id="lokasi" class="container py-5">
       <div class="section-title text-center">
-        <h2>Lokasi Kami</h2>
+        <h2>Our Location</h2>
       </div>
       <div class="d-flex justify-content-center">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.340495281109!2d109.2517902!3d-7.42752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655f3a2599ad45%3A0x70faecc374ab6d9c!2sGressoy!5e0!3m2!1sid!2sid!4v1755591421858!5m2!1sid!2sid"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.331904210831!2d109.2380434!3d-7.4284743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655f3a2599ad45%3A0x70faecc374ab6d9c!2sGressoy!5e0!3m2!1sid!2sid!4v1758640931309!5m2!1sid!2sid"
           width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
     </section>
 
-    <!-- Pesan Online -->
+    <!-- Order Online -->
     <section id="order" class="container py-5">
-      <div class="section-title text-center">
-        <h2>Pesan Online</h2>
+      <div class="section
+      -title text-center">
+        <h2>Order Online</h2>
       </div>
       <div class="d-flex justify-content-center gap-3 flex-wrap">
-  <!-- <a href="https://r.grab.com/g/6-20250811_163406_5a4ba69990424a118b1570cf2c5b810e_MEXMPS-6-CZBGVAWZAJCHCX" target="_blank" class="btn btn-success">Pesan via Grab</a> -->
-  <a href="https://r.grab.com/g/6-20250811_163406_5a4ba69990424a118b1570cf2c5b810e_MEXMPS-6-CZBGVAWZAJCHCX" target="_blank" class="btn btn-success order-btn-custom">Pesan via Grab</a>
-  <a href="#" target="_blank" class="btn btn-success order-btn-custom">Pesan via Gojek</a>
-  <a href="#" target="_blank" class="btn btn-success order-btn-custom">Pesan via ShopeeFood</a>
+  <a href="https://r.grab.com/g/6-20250811_163406_5a4ba69990424a118b1570cf2c5b810e_MEXMPS-6-CZBGVAWZAJCHCX" target="_blank" class="btn btn-success order-btn-custom" style="padding: 15px 30px; font-size: 16px; min-height: 50px; display: flex; align-items: center; justify-content: center; text-decoration: none;">Order via Grab</a>
+  <a href="https://gofood.link/a/EyTNg3C" target="_blank" class="btn btn-success order-btn-custom" style="padding: 15px 30px; font-size: 16px; min-height: 50px; display: flex; align-items: center; justify-content: center; text-decoration: none;">Order via Gojek</a>
       </div>
     </section>
-
   </main>
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" class="bg-light">
+  <footer id="footer" class="bg-light border-top">
     <div class="container text-center py-4">
-      <img src="assets/BG Gressoy.jpg" alt="Gressoy Logo" class="footer-logo mb-3" style="max-height: 120px; width: auto;">
-      <p>Susu Kedelai Segar untuk Kesehatan Anda</p>
-      <div class="social-links mb-3">
-        <a href="https://www.instagram.com/gressoy.id" class="instagram fs-3"><i class="bx bxl-instagram"></i></a>
-      </div>
+      <img src="assets/BG Gressoy.png" alt="Gressoy Logo" class="footer-logo mb-3" style="max-height: 80px; width: auto;">
+      <p class="text-muted">Fresh Soy Milk for Your Health</p>
       <div class="copyright text-muted">
-        &copy; Hak Cipta <strong><span>Gressoy</span></strong>. Seluruh Hak Dilindungi
+        &copy; 2025 <strong>Gressoy</strong>. All Rights Reserved
       </div>
     </div>
   </footer>
 
   <!-- Vendor JS via CDN -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/glightbox.min.js"></script>
-  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 
-  <!-- Template Main JS -->
+  <!-- Main JS -->
   <script src="assets/js/main.js"></script>
   <script>
-    // Navbar highlight konsisten saat klik/scroll
     document.addEventListener('DOMContentLoaded', function() {
-      const navLinks = document.querySelectorAll('.navbar .nav-link.scrollto');
-      function setActiveNav(hash) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === hash) {
-            link.classList.add('active');
+      // Mobile Navigation Toggle - Perbaikan untuk Android
+      const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+      const navbar = document.querySelector('#navbar ul');
+      
+      if (mobileNavToggle && navbar) {
+        // Gunakan touchstart untuk Android agar lebih responsif
+        mobileNavToggle.addEventListener('touchstart', handleToggle, {passive: false});
+        mobileNavToggle.addEventListener('click', handleToggle);
+        
+        function handleToggle(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          console.log('Toggle clicked/touched'); // Debug log
+          
+          navbar.classList.toggle('mobile-nav-active');
+          
+          // Toggle icon
+          if (this.classList.contains('bi-list')) {
+            this.classList.remove('bi-list');
+            this.classList.add('bi-x');
+          } else {
+            this.classList.remove('bi-x');
+            this.classList.add('bi-list');
+          }
+        }
+        
+        // Close mobile nav when clicking on a link - Tambah touch events
+        navbar.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', closeMobileNav);
+          link.addEventListener('touchstart', closeMobileNav);
+        });
+        
+        function closeMobileNav() {
+          navbar.classList.remove('mobile-nav-active');
+          mobileNavToggle.classList.remove('bi-x');
+          mobileNavToggle.classList.add('bi-list');
+        }
+        
+        // Close mobile nav when clicking/touching outside
+        document.addEventListener('touchstart', function(e) {
+          if (!navbar.contains(e.target) && !mobileNavToggle.contains(e.target)) {
+            closeMobileNav();
+          }
+        });
+        
+        document.addEventListener('click', function(e) {
+          if (!navbar.contains(e.target) && !mobileNavToggle.contains(e.target)) {
+            closeMobileNav();
           }
         });
       }
-      // On click
-      navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          if (this.getAttribute('href').startsWith('#')) {
-            setTimeout(() => setActiveNav(this.getAttribute('href')), 10);
-          }
-        });
-      });
-      // On scroll
-      window.addEventListener('scroll', function() {
-        let fromTop = window.scrollY + 120;
-        navLinks.forEach(link => {
-          const section = document.querySelector(link.getAttribute('href'));
-          if (section && section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-            setActiveNav(link.getAttribute('href'));
-          }
-        });
-      });
     });
+
+    // Dropdown functions - Perbaikan untuk Android
+    function toggleDropdown(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      
+      console.log('Dropdown clicked'); // Debug log
+      
+      const menu = document.getElementById('socialMediaMenu');
+      const dropdown = event.target.closest('.dropdown');
+      
+      // Close all other dropdowns first
+      document.querySelectorAll('.dropdown-menu.show').forEach(otherMenu => {
+        if (otherMenu !== menu) {
+          otherMenu.classList.remove('show');
+        }
+      });
+      
+      // Toggle current dropdown
+      if (menu.classList.contains('show')) {
+        menu.classList.remove('show');
+        dropdown.classList.remove('show');
+      } else {
+        menu.classList.add('show');
+        dropdown.classList.add('show');
+      }
+    }
+
+    // Close dropdown when clicking/touching outside - Android friendly
+    document.addEventListener('touchstart', function(e) {
+      closeDropdownsOutside(e);
+    });
+    
+    document.addEventListener('click', function(e) {
+      closeDropdownsOutside(e);
+    });
+    
+    function closeDropdownsOutside(e) {
+      const dropdownToggle = e.target.closest('.dropdown');
+      
+      if (!dropdownToggle) {
+        document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+          menu.classList.remove('show');
+        });
+        document.querySelectorAll('.dropdown.show').forEach(dropdown => {
+          dropdown.classList.remove('show');
+        });
+      }
+    }
+    
+    // Tambahan: Prevent zoom on double tap untuk Android
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', function (event) {
+        const now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+        }
+        lastTouchEnd = now;
+    }, false);
+    
+    // Debug info untuk mobile testing
+    console.log('Mobile optimization loaded');
+    console.log('User Agent:', navigator.userAgent);
+    console.log('Touch support:', 'ontouchstart' in window);
+    
+    // Test function untuk memastikan JavaScript berjalan
+    window.testMobile = function() {
+      alert('JavaScript berjalan dengan baik di mobile!');
+    };
   </script>
 
+  <!-- Order form removed as per request -->
 </body>
 </html>
