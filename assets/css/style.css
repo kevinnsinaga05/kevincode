@@ -22,6 +22,42 @@
   font-size: 1.2em;
 }
 
+/* Ensure brand text is solid (not gradient) inside hero title */
+.hero-title .hero-brand {
+  -webkit-text-fill-color: currentColor !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  text-shadow: none;
+}
+
+/* Solid green for heading text inside hero title */
+.hero-title .hero-brand,
+.hero-title .hero-tagline {
+  color: #1eb675 !important;
+  -webkit-text-fill-color: currentColor !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+}
+
+/* Responsive sizing for hero heading lines */
+.hero-title .hero-tagline {
+  font-size: clamp(2.2rem, 5.5vw, 3rem) !important;
+  line-height: 1.2;
+}
+.hero-title .hero-tagline:first-of-type {
+  font-size: clamp(3.5rem, 9vw, 10rem) !important;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+/* Brand accent: make only the 'Soya Shop' words yellow in second tagline */
+.hero-title .hero-tagline .brand-yellow {
+  color: #FFC107 !important; /* brand yellow aligned with logo */
+  -webkit-text-fill-color: currentColor !important;
+}
+
 .hero-tagline {
   font-size: 1.1em;
   font-weight: 500;
@@ -34,6 +70,104 @@
   font-size: 1.25rem;
   color: #198754;
   font-weight: 500;
+}
+
+/* Helper font class for More Sugar */
+.font-sugar {
+  font-family: 'More Sugar', cursive !important;
+}
+
+/* Vesper Libre utility classes */
+.vesper-libre-regular {
+  font-family: "Vesper Libre", serif !important;
+  font-weight: 400 !important;
+  font-style: normal;
+}
+
+.vesper-libre-medium {
+  font-family: "Vesper Libre", serif !important;
+  font-weight: 500 !important;
+  font-style: normal;
+}
+
+.vesper-libre-bold {
+  font-family: "Vesper Libre", serif !important;
+  font-weight: 700 !important;
+  font-style: normal;
+}
+
+.vesper-libre-black {
+  font-family: "Vesper Libre", serif !important;
+  font-weight: 900 !important;
+  font-style: normal;
+}
+
+/* Make hero brand visibly use Vesper Libre */
+.hero-brand.vesper-libre-black {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  letter-spacing: 0;
+  line-height: 1.1;
+}
+
+/* Sniglet utility classes */
+.sniglet-regular {
+  font-family: "Sniglet", system-ui !important;
+  font-weight: 400 !important;
+  font-style: normal;
+}
+
+.sniglet-extrabold {
+  font-family: "Sniglet", system-ui !important;
+  font-weight: 800 !important;
+  font-style: normal;
+}
+
+/* Fredoka local font (TTF) */
+@font-face {
+  font-family: 'Fredoka';
+  src: url('../../Fredoka,Sniglet,Vesper_Libre/Fredoka/static/Fredoka-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fredoka';
+  src: url('../../Fredoka,Sniglet,Vesper_Libre/Fredoka/static/Fredoka-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fredoka';
+  src: url('../../Fredoka,Sniglet,Vesper_Libre/Fredoka/static/Fredoka-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fredoka';
+  src: url('../../Fredoka,Sniglet,Vesper_Libre/Fredoka/static/Fredoka-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fredoka utility classes */
+.fredoka-regular {
+  font-family: 'Fredoka', sans-serif !important;
+  font-weight: 400 !important;
+}
+.fredoka-medium {
+  font-family: 'Fredoka', sans-serif !important;
+  font-weight: 500 !important;
+}
+.fredoka-semibold {
+  font-family: 'Fredoka', sans-serif !important;
+  font-weight: 600 !important;
+}
+.fredoka-bold {
+  font-family: 'Fredoka', sans-serif !important;
+  font-weight: 700 !important;
 }
 
 .mobile-showcase-bg {
@@ -57,7 +191,7 @@
   display: block;
 }
 
-.nav-list {
+.nav-list, .navbar-nav {
   margin: 0;
   padding: 0;
   display: flex;
@@ -264,6 +398,41 @@
   box-shadow: 0 4px 24px rgba(44,62,80,0.10);
   transition: box-shadow 0.22s, transform 0.22s;
   margin-bottom: 0;
+}
+
+/* --- Responsive and Mobile Accessibility Enhancements --- */
+/* Ensure images scale on small screens */
+img { max-width: 100%; height: auto; }
+
+/* Consistent header height and body offset for fixed header */
+body { padding-top: 98px; }
+@media (max-width: 991.98px) {
+  body { padding-top: 92px; }
+}
+
+/* Logo size adjusts down on mobile for better layout */
+@media (max-width: 991.98px) {
+  .logo-img { height: 52px; }
+  .logo { height: auto; }
+}
+
+/* Navbar: collapse layout on mobile */
+.navbar.navbar-expand-lg .navbar-toggler { border: 0; outline: none; }
+.navbar .navbar-toggler:focus { box-shadow: none; }
+@media (max-width: 991.98px) {
+  .nav-list, .navbar-nav { flex-direction: column; align-items: center; gap: 0.5rem; }
+  .nav-link { padding: 0.75rem 1rem; font-size: 1rem; }
+}
+
+/* Dropdown menu spacing when inside collapsed nav */
+@media (max-width: 991.98px) {
+  .dropdown-menu { position: static; box-shadow: none; border: 0; margin-top: 0; }
+  .dropdown-menu li a { border-bottom: 0; padding: 0.5rem 1rem; }
+}
+
+/* Hero tagline sizing tweaks for small screens */
+@media (max-width: 576px) {
+  .hero-tagline { font-size: 1rem; }
 }
 .visi-misi-card:hover {
   box-shadow: 0 8px 32px rgba(30,182,117,0.13);

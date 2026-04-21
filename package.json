@@ -1,0 +1,28 @@
+{
+  "name": "soyatrack",
+  "version": "1.0.0",
+  "description": "Static frontend + lightweight Node/Express backend dengan fitur CRUD, auth sederhana, monitoring resource, dan quality checks.",
+  "main": "register-sw.js",
+  "scripts": {
+    "test": "node tests/smoke.test.js",
+    "analyze": "node scripts/analyze.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinnsinaga05/kevincode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinnsinaga05/kevincode/issues"
+  },
+  "homepage": "https://github.com/kevinnsinaga05/kevincode#readme",
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "mysql2": "^3.15.3"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Gressoy",
+  "short_name": "Gressoy",
+  "description": "Susu kedelai segar dan alami — Gressoy.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#198754",
+  "icons": [
+    { "src": "/assets/BG Gressoy.png", "sizes": "any", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/assets/maskot-1.png", "sizes": "any", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
